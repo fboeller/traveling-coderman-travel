@@ -1,0 +1,397 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <title></title>
+        <style>
+            :root:not(.light) {
+  --background-color: #044965;
+  --primary-color: #05668d;
+  --font-color: white;
+  --secondary-font-color: rgba(226, 232, 240, 1);
+  --box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+:root.light {
+  --background-color: #f8f9fa;
+  --primary-color: #dee2e6;
+  --font-color: #212529;
+  --secondary-font-color: #495057;
+}
+
+.sr-only {
+  position: absolute;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
+
+html,
+body,
+div,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+pre,
+a,
+code,
+img,
+article,
+footer,
+header,
+nav,
+section {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--font-color);
+  font-family: Montserrat, sans-serif;
+  line-height: 1.5;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 1rem;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  width: 100%;
+}
+
+body > * {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+a {
+  color: var(--font-color);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+@media (min-width: 640px) {
+  body {
+    max-width: 640px;
+  }
+}
+
+@media (min-width: 768px) {
+  body {
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    max-width: 1024px;
+  }
+}
+
+h1,
+h2,
+h3 {
+  font-weight: normal;
+}
+
+h1 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  margin-top: 2rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  margin-top: 1.5rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.6rem;
+  margin-top: 1.5rem;
+}
+
+.content-date {
+  font-size: 0.875rem;
+  color: var(--secondary-font-color);
+  margin-bottom: 1rem;
+}
+
+footer {
+  margin-top: 2rem;
+}
+
+.tools {
+  margin-top: 1em;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7em;
+}
+
+.tool {
+  position: relative;
+  display: inline-block;
+  width: 8em;
+  height: 2em;
+}
+
+.tool img {
+  display: inline;
+  width: 2em;
+  height: 2em;
+  border-radius: 0.5em;
+}
+
+.tool span {
+  display: inline;
+  position: absolute;
+  line-height: 2em;
+  left: 2.7em;
+}
+
+.tool img.white {
+  background-color: white;
+}
+
+.tool img.padding-1 {
+  padding: 2px;
+  height: calc(2em - 4px);
+  width: calc(2em - 4px);
+}
+
+.tool img.padding-2 {
+  padding: 4px;
+  height: calc(2em - 8px);
+  width: calc(2em - 8px);
+}
+
+            header {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (min-width: 640px) {
+  header {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+  }
+}
+
+.nav-pages-footer {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: center;
+}
+
+        </style>
+        <link rel="icon" href="/favicon.ico"/>
+        <link rel="stylesheet" href="/node_modules/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'; this.onload=null;">
+        <link rel="stylesheet" href="/node_modules/blueimp-gallery/css/blueimp-gallery.min.css" media="print" onload="this.media='all'; this.onload=null;">
+        
+            <link rel="stylesheet" href="/node_modules/flag-icon-css/css/flag-icons.min.css" media="print" onload="this.media='all'; this.onload=null;">
+        
+        <script defer data-domain="travel.traveling-coderman.net" src="https://plausible.io/js/plausible.outbound-links.js"></script>
+    </head>
+    <body>
+        <header>
+            <style>
+    header .title {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+header .title .portrait img {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 9999px;
+  max-width: 100%;
+}
+
+header .title .name {
+  margin-left: 1rem;
+  margin-top: 0.75rem;
+}
+
+header .title .name .first {
+  display: block;
+  font-size: 1.125rem;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+header .title .name .second {
+  display: block;
+  font-size: 0.875rem;
+  margin-top: 0;
+  color: var(--secondary-font-color);
+}
+
+@media (min-width: 640px) {
+  header .title .portrait img {
+    width: 8rem;
+    height: 8rem;
+  }
+  header .title .name {
+    margin-left: 2rem;
+    margin-top: 2rem;
+  }
+  header .title .name .first {
+    font-size: 1.5rem;
+  }
+  header .title .name .second {
+    font-size: 1.125rem;
+  }
+}
+
+</style>
+
+<a class="title" href="/" aria-labelledby="title-link-description">
+    <span id="title-link-description" class="sr-only">Back to main page</span>
+    <div class="portrait">
+        <img src="/img/S-AmsyMKXs-128.webp" alt="Portrait photo of Fabian Böller">
+    </div>
+    <div class="name">
+        <span class="first">Fabian Böller</span>
+        <span class="second">Traveling Coderman</span>
+    </div>
+</a>
+            <style>
+    .theme-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  box-shadow: var(--box-shadow);
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 0.5rem;
+  border-color: rgba(226, 232, 240, 0);
+  background-color: var(--primary-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+:root:not(.light) .theme-icon .fa-sun {
+  display: none;
+}
+
+:root:not(.light) .theme-icon .fa-moon {
+  display: inline-block;
+  color: white;
+}
+
+:root.light .theme-icon .fa-sun {
+  display: inline-block;
+}
+
+:root.light .theme-icon .fa-moon {
+  display: none;
+}
+
+</style>
+
+<button type="button" class="theme-icon">
+    <i aria-hidden="true" class="fas fa-moon" title="Toggle between dark and light mode"></i>
+    <i aria-hidden="true" class="fas fa-sun" title="Toggle between dark and light mode"></i>
+    <span class="sr-only">Toggle between dark and light mode</span>
+</button>
+
+<script type="text/javascript">
+    function isLight() {
+  return localStorage.getItem("light-mode");
+}
+
+function toggleRootClass() {
+  document.querySelector(":root").classList.toggle("light");
+}
+
+function toggleLocalStorageItem() {
+  if (isLight()) {
+    localStorage.removeItem("light-mode");
+  } else {
+    localStorage.setItem("light-mode", "set");
+  }
+}
+
+if (isLight()) {
+  toggleRootClass();
+}
+
+document.querySelector(".theme-icon").addEventListener("click", () => {
+  toggleLocalStorageItem();
+  toggleRootClass();
+});
+
+</script>
+            <style>
+    .social-link-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.social-link {
+  display: block;
+  cursor: pointer;
+  width: 2.5rem;
+  height: 2.5rem;
+  box-shadow: var(--box-shadow);
+  border-radius: 0.5rem;
+  background-color: var(--primary-color);
+}
+
+.social-link img {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+</style>
+
+<div class="social-link-container">
+    <a class="social-link" href="https://www.instagram.com/fabianboeller/">
+        <img
+      src="/img/BD2w-BlKsB-1784.webp"
+      alt="Instagram Logo"
+      loading="lazy"
+      decoding="async">
+        <span class="sr-only">fabianboeller</span>
+    </a>
+</div>
+        </header>
+        
+<style>
+    article {
+        margin-top: 1rem;
+    }
+    iframe {
+        border-radius: 0.5rem;
+        box-shadow: var(--box-shadow);
+    }
+</style>
+
+<article>
+    <iframe src="https://www.komoot.de/tour/580502739/embed?share_token=aXBj8jQUvW021H7Cs3eGepXpc8BCRMj5n51Ljrze15aZiXIrIb&profile=1" width="100%" height="720" frameborder="0" scrolling="no"></iframe>
+</article>
+    </body>
+</html>
