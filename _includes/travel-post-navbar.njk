@@ -1,0 +1,27 @@
+<style>
+    {% include "_includes/travel-post-navbar.css" %}
+</style>
+
+{% set previousPost = collections.travel | getPreviousCollectionItem(page) %}
+{% set nextPost = collections.travel | getNextCollectionItem(page) %}
+
+<div class="travel-nav">
+    <a href="{{ previousPost.url }}" class="previous">
+        {% if previousPost %}
+            <i class="fas fa-chevron-left"></i>
+            <span class="flag-icon flag-icon-{{ previousPost.data.flag }}"></span>
+            <span>{{ previousPost.data.title }}</span>
+        {% endif %}
+    </a>
+    <a href="{{ url }}" class="current">
+        <span class="flag-icon flag-icon-{{ flag }}"></span>
+        <span>{{ title }}</span>
+    </a>
+    <a href="{{ nextPost.url }}" class="next">
+        {% if nextPost %}
+            <span class="flag-icon flag-icon-{{ nextPost.data.flag }}"></span>
+            <span>{{ nextPost.data.title }}</span>
+            <i class="fas fa-chevron-right"></i>
+        {% endif %}
+    </a>
+</div>

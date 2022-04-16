@@ -1,0 +1,61 @@
+<style>
+  {% include "_includes/gallery.css" %}
+</style>
+
+<script src="{{ '/node_modules/blueimp-gallery/js/blueimp-gallery.min.js' | url }}"></script>
+
+<div
+  id="blueimp-gallery"
+  class="blueimp-gallery"
+  aria-label="image gallery"
+  aria-modal="true"
+  role="dialog"
+>
+  <div class="slides" aria-live="polite"></div>
+  <span
+    class="prev"
+    aria-controls="blueimp-gallery"
+    aria-label="previous slide"
+    aria-keyshortcuts="ArrowLeft"
+  ></span>
+  <span
+    class="next"
+    aria-controls="blueimp-gallery"
+    aria-label="next slide"
+    aria-keyshortcuts="ArrowRight"
+  ></span>
+  <span
+    class="close"
+    aria-controls="blueimp-gallery"
+    aria-label="close"
+    aria-keyshortcuts="Escape"
+  ></span>
+  <span
+    class="play-pause"
+    aria-controls="blueimp-gallery"
+    aria-label="play slideshow"
+    aria-keyshortcuts="Space"
+    aria-pressed="false"
+    role="button"
+  ></span>
+  <ol class="indicator"></ol>
+</div>
+
+<script type="text/javascript">
+  let elements = document.querySelectorAll('.links');
+  for (let element of elements) {
+    element.onclick = function (event) {
+      event = event || window.event
+      var target = event.target || event.srcElement
+      var link = target.src
+        ? target.parentNode
+        : target
+      var options = {
+        index: link,
+        event: event
+      }
+      var links = this.getElementsByTagName('a')
+      blueimp.Gallery(links, options)
+    }
+  }
+</script>

@@ -1,0 +1,14 @@
+<style>
+    {% include "_includes/title-portrait.css" %}
+</style>
+
+<a class="title" href="{{ ('/' if part == 'code' else '/travel') | url }}" aria-labelledby="title-link-description">
+    <span id="title-link-description" class="sr-only">Back to main page</span>
+    <div class="portrait">
+        {% portrait %}
+    </div>
+    <div class="name">
+        <span class="first">Fabian Böller</span>
+        <span class="second">Traveling Coderman</span>
+    </div>
+</a>

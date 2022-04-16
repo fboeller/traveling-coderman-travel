@@ -1,0 +1,4 @@
+Sitemap: https://travel.traveling-coderman.net/sitemap.xml
+
+User-agent: *
+Disallow:

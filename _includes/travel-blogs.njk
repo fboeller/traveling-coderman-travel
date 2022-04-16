@@ -1,0 +1,39 @@
+<style>
+    {% include "_includes/travel-blogs.css" %}
+</style>
+
+<div id="current-time-and-location">
+    <div class="location-and-timeframe">
+        <div class="location">
+            <span class="flag-icon flag-icon-{{ destination.flag }}"></span>
+            <h2>{{ destination.country }}</h2>
+        </div>
+        <span id="current-time" class="timeframe"></span>
+    </div>
+</div>
+
+<script>
+    const currentTime = new Date(new Date().toLocaleString("en-US", {timeZone: "{{ destination.timezone }}"}));
+    document
+        .getElementById("current-time")
+        .innerHTML = currentTime.toLocaleString("de-DE");
+</script>
+
+<ul class="post-link-container">
+    {%- for post in collections.travel -%}
+        <li class="post-link">
+            <a href="{{ post.url | url }}" aria-labelledby="title">
+                <div class="location-and-timeframe">
+                    <div class="location">
+                        <span class="flag-icon flag-icon-{{ post.data.flag }}"></span>
+                        <h2 id="title">{{ post.data.title }}</h2>
+                    </div>
+                    <span class="timeframe">{{ post.data.timeframe }}</span>
+                </div>
+                {%- if not post.data.future -%}
+                    <span class="link-text">View photos</span>
+                {%- endif -%}
+            </a>
+        </li>
+    {%- endfor -%}
+</ul>

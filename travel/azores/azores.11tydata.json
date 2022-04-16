@@ -1,0 +1,20 @@
+{
+  "locations": {
+    "sete-cidades": {
+      "id": "sete-cidades",
+      "hike": "https://www.komoot.de/tour/568877143/embed?share_token=abMxGV11UMp2iNVfQ96sVfLUys2gQXaB9xnxRl80AnruH9Cmam"
+    },
+    "ferreria": {
+      "id": "ferreria",
+      "hike": "https://www.komoot.de/tour/559298474/embed?share_token=aLQDy7Yl48eUUAOafs4VuVAsulTABWswV4AXxuT0hvuBnKQpTQ"
+    },
+    "lagoa-do-fogo": {
+      "id": "lagoa-do-fogo",
+      "hike": "https://www.komoot.de/tour/553307546/embed?share_token=a0lIigyuReMq9eXsYZySj8aA1xJhmrRVkmkmeahHAtZmMIo5f5"
+    },
+    "lagoa-do-congro": {
+      "id": "lagoa-do-congro",
+      "hike": "https://www.komoot.de/tour/553507849/embed?share_token=akoSxfzBNanO4FfbhGwmxR1aM7QKZccD1v66t3nv7rut7rJCbL"
+    }
+  }
+}

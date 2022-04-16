@@ -1,0 +1,32 @@
+.theme-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  box-shadow: var(--box-shadow);
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 0.5rem;
+  border-color: rgba(226, 232, 240, 0);
+  background-color: var(--primary-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+:root:not(.light) .theme-icon .fa-sun {
+  display: none;
+}
+
+:root:not(.light) .theme-icon .fa-moon {
+  display: inline-block;
+  color: white;
+}
+
+:root.light .theme-icon .fa-sun {
+  display: inline-block;
+}
+
+:root.light .theme-icon .fa-moon {
+  display: none;
+}

@@ -1,0 +1,28 @@
+{
+  "locations": {
+    "boca-do-risco": {
+      "id": "boca-do-risco",
+      "hike": "https://www.komoot.de/tour/580502739/embed?share_token=aXBj8jQUvW021H7Cs3eGepXpc8BCRMj5n51Ljrze15aZiXIrIb"
+    },
+    "alecrim": {
+      "id": "alecrim",
+      "hike": "https://www.komoot.de/tour/601259371/embed?share_token=a6BBOFy26uiZtkdLwaZ2AsVnFUhG79kiUB4SHtvqic3McXpDqD"
+    },
+    "fanal": {
+      "id": "fanal",
+      "hike": "https://www.komoot.de/tour/598839835/embed?share_token=aTfgH7ilznTN4GohsIDY6jS8QBAAFN2d20VjDXOfFWV2dN6Kwf"
+    },
+    "pico-do-ariero": {
+      "id": "pico-do-ariero",
+      "hike": "https://www.komoot.de/tour/586999581/embed?share_token=arKY3DtHk1hDbHGn58I42Joyw3hotvnn97ScAqPA1zVh0Wy1Kz"
+    },
+    "levada-nova": {
+      "id": "levada-nova",
+      "hike": "https://www.komoot.de/tour/596159817/embed?share_token=aPWf9iDXSGJPZ0uVinNIFDb500WWTzN9VIRof46O2sh7x82rTE"
+    },
+    "achadas-da-cruz": {
+      "id": "achadas-da-cruz",
+      "hike": "https://www.komoot.de/tour/601520427/embed?share_token=a1p96OsIPq2u9VpmEqaC7CGecUyYyHsuqyrTGM9tDAuE7vZ79f"
+    }
+  }
+}

@@ -1,0 +1,30 @@
+---
+layout: travel-page.njk
+tags: 
+  - travel
+  - flags
+part: travel
+excludeFromSitemap: true
+---
+
+<style>
+    {% include "_includes/location-post.css" %}
+</style>
+
+{% include "_includes/travel-post-navbar.njk" %}
+
+<h1>{{ title }}</h1>
+<article>
+    {{ description }}
+    {{ content | safe }}
+
+    {% if images %}
+        <div class="links">
+            {% for imageFile in images | imageFiles %}
+                {% image imageFile %}
+            {% endfor %}
+        </div>
+    {% endif %}
+</article>
+
+{% include "_includes/gallery.njk" %}

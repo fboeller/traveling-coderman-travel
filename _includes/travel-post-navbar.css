@@ -1,0 +1,62 @@
+.travel-nav {
+  background-color: var(--primary-color);
+  border-radius: 0.5rem;
+  box-shadow: var(--box-shadow);
+  margin-top: 1rem;
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.travel-nav a {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  text-align: center;
+}
+
+.travel-nav .previous {
+  padding-left: 1rem;
+}
+
+.travel-nav .next {
+  padding-right: 1rem;
+}
+
+.travel-nav .current {
+  display: none;
+  font-weight: 700;
+}
+
+.travel-nav a:hover {
+  text-decoration: none;
+}
+
+.travel-nav span {
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.travel-nav i {
+  vertical-align: middle;
+  display: inline-block;
+  width: 0.6rem;
+}
+
+.travel-nav .flag-icon {
+  width: 2rem !important;
+  height: 2rem;
+  margin-right: 0.25rem;
+}
+
+@media (min-width: 640px) {
+  .travel-nav {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .travel-nav .current {
+    display: inline-block;
+  }
+}

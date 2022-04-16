@@ -1,0 +1,47 @@
+header .title {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+header .title .portrait img {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 9999px;
+  max-width: 100%;
+}
+
+header .title .name {
+  margin-left: 1rem;
+  margin-top: 0.75rem;
+}
+
+header .title .name .first {
+  display: block;
+  font-size: 1.125rem;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+header .title .name .second {
+  display: block;
+  font-size: 0.875rem;
+  margin-top: 0;
+  color: var(--secondary-font-color);
+}
+
+@media (min-width: 640px) {
+  header .title .portrait img {
+    width: 8rem;
+    height: 8rem;
+  }
+  header .title .name {
+    margin-left: 2rem;
+    margin-top: 2rem;
+  }
+  header .title .name .first {
+    font-size: 1.5rem;
+  }
+  header .title .name .second {
+    font-size: 1.125rem;
+  }
+}

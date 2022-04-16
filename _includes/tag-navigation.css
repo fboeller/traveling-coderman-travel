@@ -1,0 +1,33 @@
+.tag-navigation {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding: 0;
+  gap: 1rem;
+}
+
+.tag-navigation > li {
+  display: block;
+  position: relative;
+  height: 2.5rem;
+  cursor: pointer;
+  box-shadow: var(--box-shadow);
+  background-color: var(--primary-color);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  line-height: 2.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.tag-navigation > li:hover {
+  text-decoration: underline;
+}
+
+.tag-navigation > li a[aria-current="page"] {
+  text-decoration: underline;
+}

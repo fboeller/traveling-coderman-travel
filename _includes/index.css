@@ -1,0 +1,173 @@
+:root:not(.light) {
+  --background-color: #044965;
+  --primary-color: #05668d;
+  --font-color: white;
+  --secondary-font-color: rgba(226, 232, 240, 1);
+  --box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+:root.light {
+  --background-color: #f8f9fa;
+  --primary-color: #dee2e6;
+  --font-color: #212529;
+  --secondary-font-color: #495057;
+}
+
+.sr-only {
+  position: absolute;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
+
+html,
+body,
+div,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+pre,
+a,
+code,
+img,
+article,
+footer,
+header,
+nav,
+section {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--font-color);
+  font-family: Montserrat, sans-serif;
+  line-height: 1.5;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 1rem;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  width: 100%;
+}
+
+body > * {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+a {
+  color: var(--font-color);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+@media (min-width: 640px) {
+  body {
+    max-width: 640px;
+  }
+}
+
+@media (min-width: 768px) {
+  body {
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    max-width: 1024px;
+  }
+}
+
+h1,
+h2,
+h3 {
+  font-weight: normal;
+}
+
+h1 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  margin-top: 2rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  margin-top: 1.5rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.6rem;
+  margin-top: 1.5rem;
+}
+
+.content-date {
+  font-size: 0.875rem;
+  color: var(--secondary-font-color);
+  margin-bottom: 1rem;
+}
+
+footer {
+  margin-top: 2rem;
+}
+
+.tools {
+  margin-top: 1em;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7em;
+}
+
+.tool {
+  position: relative;
+  display: inline-block;
+  width: 8em;
+  height: 2em;
+}
+
+.tool img {
+  display: inline;
+  width: 2em;
+  height: 2em;
+  border-radius: 0.5em;
+}
+
+.tool span {
+  display: inline;
+  position: absolute;
+  line-height: 2em;
+  left: 2.7em;
+}
+
+.tool img.white {
+  background-color: white;
+}
+
+.tool img.padding-1 {
+  padding: 2px;
+  height: calc(2em - 4px);
+  width: calc(2em - 4px);
+}
+
+.tool img.padding-2 {
+  padding: 4px;
+  height: calc(2em - 8px);
+  width: calc(2em - 8px);
+}
