@@ -1,5 +1,5 @@
 ---
-layout: travel-post.njk
+layout: post.njk
 title: Nicaragua
 flag: ni
 timeframe: In April 2022

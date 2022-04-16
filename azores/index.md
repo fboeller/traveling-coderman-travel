@@ -1,5 +1,5 @@
 ---
-layout: travel-post.njk
+layout: post.njk
 title: The Azores
 flag: pt
 timeframe: 3.11.2021 - 20.11.2021

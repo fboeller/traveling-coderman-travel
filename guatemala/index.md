@@ -1,5 +1,5 @@
 ---
-layout: travel-post.njk
+layout: post.njk
 title: Guatemala
 flag: gt
 timeframe: 02.02.2022 - 11.03.2022

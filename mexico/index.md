@@ -1,5 +1,5 @@
 ---
-layout: travel-post.njk
+layout: post.njk
 title: Mexico
 flag: mx
 timeframe: 06.01.2022 - 02.02.2022

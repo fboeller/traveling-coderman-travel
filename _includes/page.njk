@@ -7,7 +7,7 @@
         <title>{{ title }}</title>
         <style>
             {% include "_includes/index.css" %}
-            {% include "_includes/travel-page.css" %}
+            {% include "_includes/page.css" %}
         </style>
         <link rel="icon" href="{{ '/favicon.ico' | url }}"/>
         <link rel="stylesheet" href="{{ '/node_modules/@fortawesome/fontawesome-free/css/all.min.css' | url }}" media="print" onload="this.media='all'; this.onload=null;">
@@ -15,13 +15,13 @@
         {% if tags.includes("flags") %}
             <link rel="stylesheet" href="{{ '/node_modules/flag-icon-css/css/flag-icons.min.css' | url }}" media="print" onload="this.media='all'; this.onload=null;">
         {% endif %}
-        <script defer data-domain="traveling-coderman.net" src="https://plausible.io/js/plausible.outbound-links.js"></script>
+        <script defer data-domain="travel.traveling-coderman.net" src="https://plausible.io/js/plausible.outbound-links.js"></script>
     </head>
     <body>
         <header>
             {% include "_includes/title-portrait.njk" %}
             {% include "_includes/theme-switch.njk" %}
-            {% include "_includes/travel-social-links.njk" %}
+            {% include "_includes/social-links.njk" %}
         </header>
         {{ content | safe }}
     </body>

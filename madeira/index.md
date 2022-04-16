@@ -1,5 +1,5 @@
 ---
-layout: travel-post.njk
+layout: post.njk
 title: Madeira
 flag: pt
 timeframe: 20.11.2021 - 18.12.2021

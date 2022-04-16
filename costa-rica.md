@@ -1,5 +1,5 @@
 ---
-layout: travel-post.njk
+layout: post.njk
 title: Costa Rica
 flag: cr
 timeframe: 11.03.2022 - 08.04.2022
