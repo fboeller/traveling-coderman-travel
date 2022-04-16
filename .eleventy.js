@@ -49,16 +49,9 @@ async function imageShortcode(src) {
     </a>`;
 }
 
-async function postLinkShortcode(link, title) {
-  return `<a href="${link}" target="_blank">For more information on this, checkout '${title}'</a>`;
-}
-
 function configureMarkdown(eleventyConfig) {
   const markdownItOptions = {
     html: true,
-  };
-  const permalinkOpts = {
-    symbol: "🔗",
   };
   const markdownLib = markdownIt(markdownItOptions)
     .use(markdownItAttrs)
@@ -76,12 +69,10 @@ module.exports = function (eleventyConfig) {
   addShortcode(eleventyConfig, "portrait", portraitShortcode);
   addShortcode(eleventyConfig, "sizedImage", sizedImageShortcode);
   addShortcode(eleventyConfig, "image", imageShortcode);
-  addShortcode(eleventyConfig, "postLink", postLinkShortcode);
   eleventyConfig.addPassthroughCopy("node_modules/blueimp-gallery");
   eleventyConfig.addPassthroughCopy("node_modules/flag-icon-css");
   eleventyConfig.addPassthroughCopy("node_modules/@fortawesome");
   eleventyConfig.addPassthroughCopy("assets");
-  eleventyConfig.addPassthroughCopy("code/**/*.png");
   eleventyConfig.addPassthroughCopy("favicon.ico");
   eleventyConfig.addPassthroughCopy("robots.txt");
   eleventyConfig.addPassthroughCopy("CNAME");
